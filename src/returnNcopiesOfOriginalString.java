@@ -9,13 +9,22 @@ public class returnNcopiesOfOriginalString {
 
     public static String stringTimes(String str, int n) {
 
-        int frontLen = Math.min(20, str.length());
-        String front = str.substring(0, frontLen);
+        int wordLen = Math.min(20, str.length());
+        String wd = str.substring(0, wordLen);
 
-        StringBuilder sb = new StringBuilder(front.length() * n);
-        for (int i = 0; i < n; ++i) {
-            sb.append(front);
+        StringBuilder sb = new StringBuilder(wd.length() * n);
+        for (int i = 0; i < n; i++) {
+            sb.append(wd);
         }
         return sb.toString();
     }
-}
+
+    public static String stringTimesOne(String str, int n) {
+            String result = "";
+            for (int i=0; i<n; i++) {
+                result += str;
+            }
+            return result;
+        }
+    }
+
